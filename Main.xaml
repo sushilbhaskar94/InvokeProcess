@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="firstNum" Type="OutArgument(x:Int32)" />
+    <x:Property Name="secondNum" Type="OutArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>620.666666666667,1699.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="27">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="538.666666666667,1634.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="choice" />
+      <Variable x:TypeArguments="x:Int32" Name="result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="First input number" sap:VirtualizedContainerService.HintSize="496.666666666667,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Provide first Input Number">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[firstNum]</OutArgument>
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Second input number" sap:VirtualizedContainerService.HintSize="496.666666666667,52" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Provide second Input Number">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[secondNum]</OutArgument>
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <ui:InputDialog OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.666666666667,296" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter the choice for operation" Options="[{&quot;Addition&quot;,&quot;Substraction&quot;,&quot;Multiplication&quot;,&quot;Division&quot;}]">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[choice]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Remember to change to TypeArgument to String.&#xD;&#xA;&#xD;&#xA;Because we get result into string variable." DisplayName="Switch" Expression="[choice.ToString]" sap:VirtualizedContainerService.HintSize="496.666666666667,1022.66666666667" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+      <Switch.Default>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Invalid option selected, please select correct option&quot;]" />
+      </Switch.Default>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence x:Key="Addition" sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke addition workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="addition.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num1">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="firstNum" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num2">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="secondNum" />
+            </InArgument>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="result">
+              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="result" />
+            </OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Addition result = &quot;+result.ToString]" />
+      </Sequence>
+      <Sequence x:Key="Substraction" sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke substraction workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="substraction.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="result">
+              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="result" />
+            </OutArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num1">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="firstNum" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num2">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="secondNum" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Substraction Result = &quot;+result.ToString]" />
+      </Sequence>
+      <Sequence x:Key="Multiplication" sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke multiplication workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="multiplication.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="result">
+              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="result" />
+            </OutArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num1">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="firstNum" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num2">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="secondNum" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Multiplication Result = &quot;+result.ToString]" />
+      </Sequence>
+      <Sequence x:Key="Division" sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke division workflow" sap:VirtualizedContainerService.HintSize="334,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="division.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:Int32" x:Key="result">
+              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="result" />
+            </OutArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num1">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="firstNum" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="num2">
+              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="secondNum" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Divison Result = &quot;+Cint(result).ToString]" />
+      </Sequence>
+    </Switch>
+  </Sequence>
+</Activity>
